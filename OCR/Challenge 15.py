@@ -2,7 +2,8 @@
 # Created: 09/09/2026
 # Last Updated: 09/09/2026
 
-char_set = set("abcdefghijklmnopqrstuvwxyz")
+char_set = set("abcdefghijklmnopqrstuvwxyz") # cleaner than having list of all letters
+sorted_char_list = sorted(list(char_set)) 
 
 def pangram_check(pgl):
     words = []
@@ -13,7 +14,7 @@ def pangram_check(pgl):
                 lettersonly += char.lower()
             
         removedupesort = sorted(set(lettersonly))
-        words.append(char_set == removedupesort)
+        words.append(sorted_char_list == removedupesort)
         
     return words
   
