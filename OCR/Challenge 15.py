@@ -2,7 +2,7 @@
 # Created: 09/09/2026
 # Last Updated: 09/09/2026
 
-char_set = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+char_set = set("abcdefghijklmnopqrstuvwxyz")
 
 def pangram_check(pgl):
     words = []
@@ -12,7 +12,7 @@ def pangram_check(pgl):
             if char.isalpha():
                 lettersonly += char.lower()
             
-        removedupesort = sorted(list(set(lettersonly)))
+        removedupesort = sorted(set(lettersonly))
         words.append(char_set == removedupesort)
         
     return words
