@@ -1,4 +1,4 @@
-# Challenge 15 - Pangrams (Draft)
+# Challenge 15 - Pangrams
 # Created: 09/09/2026
 # Last Updated: 09/09/2026
 
