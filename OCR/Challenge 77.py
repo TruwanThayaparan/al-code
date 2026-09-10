@@ -13,16 +13,16 @@ def fibonacci_loop(n):
 
     return fib
     
-def fl_until_4d():
+def fl_until_1000d():
     fib = []
     a, b = 0, 1
     while True:
         a, b = b, a + b
         fib.append(str(a))
         if len(str(a)) == 1000:
-            x = fib.index(str(a))
+            x = len(fib)
             return a, x
 
-fib4, x = fl_until_4d()
+fib4, x = fl_until_1000d()
 print(fib4)
-print(x + 1)
+print(x)
