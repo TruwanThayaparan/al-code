@@ -1,0 +1,68 @@
+# Challenge 37 - Fizz Buzz
+# Created: 10/09/2026
+# Last Updated: 10/09/2026
+
+def prime_factor(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+      if n % i == 0:
+          factors.append(i)
+          if len(factors) == 2:
+            return factors
+          n = n // i
+      else:
+          i += 1
+  
+    if n > 1:
+        factors.append(n)
+
+    return factors
+
+def fizzbuzz(a, b, m):
+    for i in range(1, m + 1):
+        prime_check = prime_factor(i)
+        if len(prime_check) == 1:
+            print("OOPS!")
+            continue
+
+        if i % a == 0 and i % b == 0:
+            print("FizzBuzz")
+        elif i % a == 0:
+            print("Fizz")
+        elif i % b == 0:
+            print("Buzz")
+        else:
+            print(i)
+    print("\n")
+    
+def main():
+    constraint_a = 3
+    constraint_b = 5
+    print("Fizz Buzz Provider")
+    print("1. Start")
+    print("2. Change Base Numbers (CBN)")
+    print("3. Exit\n")
+    while True:
+        try:
+            ans = input("Choose an option: ").strip().lower()
+            if ans in ("3", "exit", "quit", "q"):
+                break
+            if ans in ("2", "cbn", "base changer"):
+                print(f"Base Number 1: {constraint_a}")
+                print(f"Base Number 2: {constraint_b}")
+                try:
+                    constraint_a = int(input("Enter base number 1: "))
+                    constraint_b = int(input("Enter base number 2: "))
+                except ValueError:
+                    print("Operation cancelled.\n")
+            if ans in ("1", "start", "begin"):
+                try:
+                    maximum = int(input("What number should the program count to? "))
+                    fizzbuzz(constraint_a, constraint_b, maximum)
+                except ValueError:
+                    print("Operation cancelled.\n")
+        except ValueError:
+            print()
+
+main()
