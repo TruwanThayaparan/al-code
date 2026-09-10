@@ -25,6 +25,6 @@ def main():
                 raise ValueError
             print(prime_factor(x))
         except ValueError:
-            print("You must enter a positive number.")
+            print("You must enter a positive integer greater than 1.")
   
 main()
