@@ -4,24 +4,24 @@
 
 from time import sleep
 
+def bottle_text(i):
+    if i == 2:
+        return "2 green bottles", "1 green bottle"
+    elif i == 1:
+        return "1 green bottle", "no green bottles"
+    else:
+        return f"{i} green bottles", f"{i-1} green bottles"
+
 def countbottles(gre):
     t = None
     for i in range(gre, 0, -1):
         print("\n")
-        if i == 2:
-            t = "2 green bottles"
-            u = "1 green bottle"
-        elif i == 1:
-            t = "1 green bottle"
-            u = "no green bottles"
-        else:
-            t = f"{i} green bottles"
-            u = f"{i-1} green bottles"
 
-        print(f"{t} hanging on the wall,")
-        print(f"{t} hanging on the wall,")
+        a, b = bottle_text(i)
+        print(f"{a} hanging on the wall,")
+        print(f"{a} hanging on the wall,")
         print("And if one green bottle should accidentally fall,")
-        print(f"There'll be {u} hanging on the wall.")
+        print(f"There'll be {b} hanging on the wall.")
         #sleep(0.5)
 
 def main():
