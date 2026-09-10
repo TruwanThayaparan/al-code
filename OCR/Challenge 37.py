@@ -2,27 +2,16 @@
 # Created: 10/09/2026
 # Last Updated: 10/09/2026
 
-def prime_factor(n):
-    i = 2
-    factors = []
-    while i * i <= n:
-      if n % i == 0:
-          factors.append(i)
-          if len(factors) == 2:
-            return factors
-          n = n // i
-      else:
-          i += 1
-  
-    if n > 1:
-        factors.append(n)
-
-    return factors
+def prime_check(i):
+    if i <= 1: return False
+    for j in range(2, int(i**0.5) + 1):
+        if i % j == 0:
+            return False
+    return True
 
 def fizzbuzz(a, b, m):
     for i in range(1, m + 1):
-        prime_check = prime_factor(i)
-        if len(prime_check) == 1:
+        if prime_check(i):
             print("OOPS!")
             continue
 
