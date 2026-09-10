@@ -1,6 +1,6 @@
-# challenge 48 - reverse it (draft)
-# created: 10/09/2026
-# last updated: 10/09/2026
+# Challenge 48 - Reverse it
+# Created: 10/09/2026
+# Last updated: 10/09/2026
 
 from collections import Counter
 from string import ascii_letters
@@ -16,9 +16,16 @@ def count_vowels_consonants(text):
     
     return vowel_total, consonant_total
 
-text = input("enter something: ")
-textrev = "".join(reversed(text))
-print(textrev)
+def main():
+    while True:
+        text = input("Enter something ('q' to quit): ")
+        if text in ('q', 'quit', 'exit'):
+            break
+        text_rev = "".join(reversed(text))
+        print(text_rev)
+        if text == text_rev:
+            print("This is a palindrome!")
+        v, c = count_vowels_consonants(text_rev)
+        print(f"Vowels: {v}, Consonants: {c}\n")
 
-v, c = count_vowels_consonants(textrev)
-print(f"Vowels: {v}, Consonants: {c}")
+main()
