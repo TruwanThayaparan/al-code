@@ -16,13 +16,15 @@ def prime_factor(n):
     
 def main():
     while True:
-      try:
-        x = input("Enter a number (prime factorisation): ").strip().lower()
-        if x in ("q", "quit", "exit"):
-          break
-        x = int(x)
-        print(prime_factor(x))
-      except ValueError:
-        print("You must enter a positive number.")
+        try:
+            x = input("Enter a number (prime factorisation): ").strip().lower()
+            if x in ("q", "quit", "exit"):
+                break
+            x = int(x)
+            if x <= 1:
+                raise ValueError
+            print(prime_factor(x))
+        except ValueError:
+            print("You must enter a positive number.")
   
 main()
