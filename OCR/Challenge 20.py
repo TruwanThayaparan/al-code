@@ -1,4 +1,4 @@
-# challenge 20
+# challenge 20 - palindromes
 # created: 11/09/2026
 # last updated: 11/09/2026
 
