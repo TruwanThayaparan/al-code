@@ -1,6 +1,6 @@
-# challenge 20 - palindromes
-# created: 11/09/2026
-# last updated: 11/09/2026
+# Challenge 20 - Palindromes
+# Created: 11/09/2026
+# Cast updated: 11/09/2026
 
 def main():
     print("This is a palindrome checker.")
@@ -8,7 +8,8 @@ def main():
         text = input("Enter something ('q' to quit): ")
         if text in ('q', 'quit', 'exit'):
             break
-        text_rev = "".join(reversed(text))
+        text_rev = text[::-1]
+        #text_rev = "".join(reversed(text))
         print(text_rev)
         if text == text_rev:
             print("This is a palindrome!\n")
