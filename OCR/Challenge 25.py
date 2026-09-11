@@ -1,4 +1,4 @@
-# challenge 25 - ordering (unfinished)
+# challenge 25 - ordering
 # created: 11/09/2026
 # last updated: 11/09/2026
 
