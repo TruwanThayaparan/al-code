@@ -14,40 +14,33 @@ def main():
         if roll in ("no", "n"):
             print("Goodbye!")
             break
+        elif roll not in ("yes", "y"):
+            print("Invalid input.")
+            print()
+            continue
+
         credit -= 20
         
         print()
         random_three = random.choices(symbols, k=3)
+        r1, r2, r3 = random_three
+
         print(f"Fruit Machine: {random_three}")
 
-        if random_three[0] == random_three[1] == random_three[2]:
-            if random_three[0] == "Skull":
+        if r1 == r2 == r3:
+            if r1 == "Skull":
                 credit = 0
-            elif random_three[0] == "Bell":
+            elif r2 == "Bell":
                 credit += 500
             else:
                 credit += 100
-        elif random_three[0] == random_three[1]:
-            if random_three[0] == "Skull":
-                credit -= 100
-            else:
-                credit += 50
-
-        elif random_three[1] == random_three[2]:
-            if random_three[1] == "Skull":
-                credit -= 100
-            else:
-                credit += 50   
-
-        elif random_three[2] == random_three[0]:
-            if random_three[2] == "Skull":
-                credit -= 100
+        elif r1 == r2 or r2 == r3 or r1 == r3:
+            if random_three.count("Skull") == 2:
+                credit = max(0, credit - 100)
             else:
                 credit += 50
                     
         if credit < 20:
-            if credit <= 0:
-                credit = 0
             print()
             print(f"Credit: £{credit/100:.2f}")
             print("You lose! Not enough credit left to spin.")
