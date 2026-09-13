@@ -23,5 +23,6 @@ Tkinter versions may be made later on.
 - Challenge 45.py - Find the factorial 
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
+- Challenge 61.py - Your name is...
 - Challenge 76.py - That's a lot of number
 - Challenge 77.py - Fib on a chi
