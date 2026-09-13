@@ -18,6 +18,7 @@ Tkinter versions may be made later on.
 - Challenge 36.py - Triangulate
 - Challenge 37.py - Fizz Buzz
 - Challenge 38.py - Sing Along
+- Challenge 39.py - Even more Odd
 - Challenge 41.py - Prime Factorisation
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
