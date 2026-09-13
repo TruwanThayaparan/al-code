@@ -19,6 +19,7 @@ Tkinter versions may be made later on.
 - Challenge 37.py - Fizz Buzz
 - Challenge 38.py - Sing Along
 - Challenge 41.py - Prime Factorisation
+- Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
 - Challenge 76.py - That's a lot of number
 - Challenge 77.py - Fib on a chi
