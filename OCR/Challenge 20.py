@@ -1,6 +1,6 @@
 # Challenge 20 - Palindromes
 # Created: 11/09/2026
-# Cast updated: 11/09/2026
+# Last updated: 11/09/2026
 
 def main():
     print("This is a palindrome checker.")
