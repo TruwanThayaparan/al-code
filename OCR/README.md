@@ -20,6 +20,7 @@ Tkinter versions may be made later on.
 - Challenge 38.py - Sing Along
 - Challenge 39.py - Even more Odd
 - Challenge 41.py - Prime Factorisation
+- Challenge 45.py - Find the factorial 
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
 - Challenge 76.py - That's a lot of number
