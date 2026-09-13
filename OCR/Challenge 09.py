@@ -1,15 +1,11 @@
 # Challenge 9 - Happy Numbers
 # Created: 09/09/2026
-# Last Updated: 09/09/2026
+# Last Updated: 13/09/2026
 
 def check_happy_numbers(hn):
     hno = hn
     while True:
-        total = 0
-        for i in str(hn): # or use total = sum(int(i) ** 2 for i in str(hn))
-            total += int(i)*int(i)
-            #print(total)
-        
+        total = sum(int(i) ** 2 for i in str(hn))
         #print(total)
         hn = total
 
