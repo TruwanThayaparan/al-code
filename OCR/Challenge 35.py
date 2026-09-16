@@ -1,6 +1,6 @@
 # CHALLENGE 35 - GAME OF CHANCE
 # CREATED: 14/09/2026
-# LAST UPDATED: 14/09/2026
+# LAST UPDATED: 16/09/2026
 
 import random
 
@@ -62,7 +62,7 @@ def main():
                 
                 break
             except ValueError:
-                print("Error: Payout amounts must be whole positive integers.")
+                print("Error: Bet amounts must be whole positive integers.")
                 continue
         
         money -= total_costs_pence
