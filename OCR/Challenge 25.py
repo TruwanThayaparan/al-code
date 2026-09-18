@@ -1,6 +1,6 @@
 # challenge 25 - ordering
 # created: 11/09/2026
-# last updated: 11/09/2026
+# last updated: 18/09/2026
 
 def order(nums, t):
     while True:
@@ -40,6 +40,7 @@ def num_sort():
             print("You must enter 10 integers.")
 
 def alpha_sort(keep_spaces):
+    jargon = []
     txt = input("Enter a string: ").lower()
     
     if not keep_spaces:
@@ -48,8 +49,6 @@ def alpha_sort(keep_spaces):
                 jargon.append(i)
         order(jargon, True)
     else:
-        words = txt.split(" ")
-        typ = ""
         while True:
             typ = input("Order by ascension or descension: ").strip().lower()
             if typ not in ("ascend", "ascending", "ascension", "asc") and typ not in ("descend", "descending", "descension", "desc"):
@@ -57,32 +56,36 @@ def alpha_sort(keep_spaces):
                 continue
             break
             
-        is_reverse = False
-        if typ not in ("ascend", "ascending", "ascension", "asc"):
-            is_reverse = True
+        is_reverse = typ not in ("ascend", "ascending", "ascension", "asc")
         
-        sorted_words = []
-        for word in words:
-            sorted_word = "".join(sorted(list(word), reverse=is_reverse))
-            sorted_words.append(sorted_word)
-            
-        print("Result: " + " ".join(sorted_words))
+        chars_to_sort = sorted([char for char in txt if char != " "], reverse=is_reverse)
+        
+        res_list = []
+        char_iter = iter(chars_to_sort)
+        for char in txt:
+            if char == " ":
+                res_list.append(" ")
+            else:
+                res_list.append(next(char_iter))
+                
+        print("Result: " + "".join(res_list))
         print("\n")
 
 def main():
-    print("1. Order numbers by asc/desc")
-    print("2. Order strings into alphabetical order (don't keep spaces)")
-    print("3. Order strings into alphabetical order (keep spaces)")
-    print("4. Quit")
     while True:
-        mode = input("Enter (1, 2, 3, 4): ")
+        print("1. Order numbers by asc/desc")
+        print("2. Order strings into alphabetical order (don't keep spaces)")
+        print("3. Order strings into alphabetical order (keep spaces)")
+        print("4. Quit")
+        
+        mode = input("Enter (1, 2, 3, 4): ").strip()
         if mode not in ("1", "2", "3", "4"):
             print("Invalid type.")
-            print(" ")
+            print()
             continue
 
-        print(" ")
-        if mode in ("quit", "q", "exit", "4"):
+        print()
+        if mode == "4":
             break
         elif mode == "1":
             num_sort()
