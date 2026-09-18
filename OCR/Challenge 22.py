@@ -1,39 +1,28 @@
 # Challenge 22 - Simple Life Calculator (WIP)
 
-def time_tables():
+def get_valid_int(prompt: str) -> int:
     while True:
         try:
-            table_start = int(input("Enter starting table number: "))
-            break
-        except ValueError:
-            print("Invalid input. Please enter a whole number.\n")
-    
-    while True:
-        try:
-            table_end = int(input("Enter finishing table number: "))
-            if table_end <= table_start:
-                print("Finishing number must be greater than the starting number.\n")
-                continue
-            break
+            return int(input(prompt))
         except ValueError:
             print("Invalid input. Please enter a whole number.\n")
 
+def time_tables():
+    table_start = get_valid_int("Enter starting table number: ")
+    
     while True:
-        try:
-            mult_min = int(input("Enter minimum multiplier figure: "))
+        table_end = get_valid_int("Enter finishing table number: ")
+        if table_end > table_start:
             break
-        except ValueError:
-            print("Invalid input. Please enter a whole number.\n")
-            
+        print("Finishing number must be greater than the starting number.\n")
+        
+    mult_min = get_valid_int("Enter minimum multiplier figure: ")
+    
     while True:
-        try:
-            mult_max = int(input("Enter maximum multiplier figure: "))
-            if mult_max <= mult_min:
-                print("Maximum figure must be greater than the minimum figure.\n")
-                continue
+        mult_max = get_valid_int("Enter maximum multiplier figure: ")
+        if mult_max > mult_min:
             break
-        except ValueError:
-            print("Invalid input. Please enter a whole number.\n")
+        print("Maximum figure must be greater than the minimum figure.\n")
 
     print("\n" + "="*30)
     print("Times tables generated:")
@@ -45,4 +34,22 @@ def time_tables():
             print(f"{i} * {j} = {i * j}")
         print()
 
-time_tables()
+def menu():
+    while True:
+        print("Simple Life Calculator:")
+        print("1. VAT \n2. Tax \n3. Times table \n4. Exit")
+        answ = input("Enter an option (1, 2, 3, or 4): ").strip()
+        if answ == "1":
+            pass
+        elif answ == "2":
+            pass
+        elif answ == "3":
+            time_tables()
+        elif answ == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("You must enter 1, 2, 3, or 4.")
+        print()
+
+menu()
