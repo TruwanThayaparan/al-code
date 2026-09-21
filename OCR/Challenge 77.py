@@ -14,14 +14,15 @@ def fibonacci_loop(n):
     return fib
     
 def fl_until_1000d():
-    fib = []
     a, b = 0, 1
+    count = 0
+    
     while True:
         a, b = b, a + b
-        fib.append(str(a))
+        count += 1
+        
         if len(str(a)) == 1000:
-            x = len(fib)
-            return a, x
+            return a, count
 
 fib4, x = fl_until_1000d()
 print(fib4)
