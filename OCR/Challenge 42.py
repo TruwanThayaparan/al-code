@@ -28,12 +28,14 @@ def main():
     area = width * length
     print(f"\nThe area of this floor is {area:.2f}m².")
     
+    tile_options = {
+        "1": {"name": "Small Tile (0.3m x 0.6m)", "w": 0.3, "l": 0.6, "price": 2.70},
+        "2": {"name": "Large Tile (0.6m x 0.6m)", "w": 0.6, "l": 0.6, "price": 9.00}
+    }
+
     print("\nAvailable Tile options:")
-    print("1. Small Tile (0.3m x 0.6m) - £2.70 each")
-    print("2. Large Tile (0.6m x 0.6m) - £9.00 each")
-    
-    ta1, ta2, tap = 0.3, 0.6, 2.70
-    tb1, tb2, tbp = 0.6, 0.6, 9.00
+    for key, tile in tile_options.items():
+        print(f"{key}. {tile['name']} - £{tile['price']:.2f} each")
     
     while True:
         opt = input("Enter an option (1 or 2): ").strip()
@@ -42,14 +44,14 @@ def main():
         else:
             break
         
-    if opt == "1":
-        lentiles = math.ceil(length / ta1)
-        widtiles = math.ceil(width / ta2)
-        tile_cost_subtotal = (lentiles * widtiles) * tap
-    else:
-        lentiles = math.ceil(length / tb1)
-        widtiles = math.ceil(width / tb2)
-        tile_cost_subtotal = (lentiles * widtiles) * tbp
+    selected_tile = tile_options[opt]
+    tw = selected_tile["w"]
+    tl = selected_tile["l"]
+    tap = selected_tile["price"]
+        
+    lentiles = math.ceil(length / tl)
+    widtiles = math.ceil(width / tw)
+    tile_cost_subtotal = (lentiles * widtiles) * tap
 
     while True:
         try:
@@ -77,7 +79,7 @@ def main():
     print(f"Labour Cost:           £{labour_cost:.2f}")
     print("-"*30)
     print(f"TOTAL (Excluding VAT): £{subtotal_no_vat:.2f}")
-    print(f"VAT ({vat_rate}%):         £{vat_total:.2f}")
+    print(f"VAT ({vat_rate}%):           £{vat_total:.2f}")
     print(f"TOTAL (Including VAT): £{total_with_vat:.2f}")
     print("="*30)
 
