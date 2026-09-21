@@ -1,4 +1,4 @@
-# don't run
+# im not liable if you run this
 from random import randint
 from time import sleep
 import sys
@@ -47,10 +47,19 @@ d8b                      888 d8b          888                                   
 """
 print(bl)
 sleep(1)
-for i in range(10):
-    for i in range(100):
-        print("█" * 100)
-    sleep(.1)
-    for i in range(100):
-        print(" " * 100)
-    sleep(.1)
+ROWS = 30
+WIDTH = 100
+
+for frame in range(10):
+    for _ in range(ROWS):
+        sys.stderr.write("█" * WIDTH + "\n")
+    sys.stderr.flush()
+    sleep(0.15)
+    
+    for _ in range(ROWS):
+        print("█" * WIDTH)
+    sleep(0.15)
+    
+    for _ in range(ROWS):
+        print(" " * WIDTH)
+    sleep(0.15)
