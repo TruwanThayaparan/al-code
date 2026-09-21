@@ -4,8 +4,8 @@
 
 def prime_check(i):
     if i <= 1: return False
-    # if i == 2: return True
-    # if i % 2 == 0: return False
+    # if i == 2: return True --> uncomment for other usages
+    # if i % 2 == 0: return False --> uncomment for other usages
     for j in range(3, int(i**0.5) + 1, 2):
         if i % j == 0:
             return False
