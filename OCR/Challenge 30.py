@@ -1,25 +1,35 @@
 # Challenge 30 - Year Addition
 # Created: 11/09/2026
-# Last Updated: 11/09/2026
+# Last Updated: 21/09/2026
 
 def guess(yr):
-    for i in range(1, 4):
+    points = 0
+    strikes = 0
+    tries = []
+    while True:
         while True:
             try:
-                print(f"\nGuess {i} of 3:")
                 p = int(input(f"{yr} divides by what integer without remainder? "))
                 if p <= 0:
                     raise ValueError
+                if p in tries:
+                    print("You already guessed this number.")
+                    continue
+                tries.append(p)
                 break
             except ValueError:
                 print("You must enter a positive integer!")
         if yr % p == 0:
-            return True
+            points += 1
+            print(f"Correct! Points: {points}")
         else:
-            if i != 3:
-                print("Wrong! Try again.")
+            strikes += 1
+            if strikes != 3:
+                print(f"Strike {strikes}! Try again.")
+            else:
+                print(f"Strike 3! Game over. Points: {points}\n")
+                break
         
-    return False
 
 def main():
     while True:
@@ -34,18 +44,10 @@ def main():
             if int(year) < 0:
                 raise ValueError
                 
-            nums = []
-            for i in year:
-                nums.append(i)
-
-            total = sum(int(n) for n in nums)
+            total = sum(int(n) for n in year)
             print(f"The total of the digits in {year} is {total}.\n")
             
-            win = guess(int(year))
-            if win == True:
-                print("You won!\n")
-            else:
-                print("You lost.\n")
+            guess(int(year))
 
         except ValueError:
             print("You must enter a positive integer in the format XXXX.\n")
