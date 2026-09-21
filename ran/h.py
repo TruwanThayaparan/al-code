@@ -54,30 +54,61 @@ from time import sleep
 ROWS = 30
 WIDTH = 41
 
-# Choose your emoji characters
+import sys
+from time import sleep
+
+# Define your grid dimensions
+ROWS = 30
+WIDTH = 41
+
+# Color and Style Palette
 COLOR_EMOJI_1 = "🟥"  # Red Square
 COLOR_EMOJI_2 = "🟦"  # Blue Square
-EMPTY_EMOJI = "⬜"    # White Square 
-EMPTY_EMOJI2 = "⬛"    # Black Square
+COLOR_EMOJI_3 = "🟧"  # Orange Square
+COLOR_EMOJI_4 = "🟨"  # Yellow Square
+COLOR_EMOJI_5 = "🟩"  # Green Square
+COLOR_EMOJI_6 = "🟪"  # Purple Square
+EMPTY_EMOJI   = "⬜"  # White Square 
+EMPTY_EMOJI2  = "⬛"  # Black Square
 
 for frame in range(10):
-    # Frame 1: Write to stderr (using Color 1)
+    # Frame 1: Red (stderr)
     for _ in range(ROWS):
         sys.stderr.write(COLOR_EMOJI_1 * WIDTH + "\n")
     sys.stderr.flush()
     sleep(0.07)
     
-    # Frame 2: Print to stdout (using Color 2)
+    # Frame 2: Blue (stdout)
     for _ in range(ROWS):
         print(COLOR_EMOJI_2 * WIDTH)
     sleep(0.07)
     
-    # Frame 3: Clear/Blank frame (using an empty or background emoji)
+    # Frame 3: Orange
+    for _ in range(ROWS):
+        print(COLOR_EMOJI_3 * WIDTH)
+    sleep(0.07)
+
+    # Frame 4: Yellow
+    for _ in range(ROWS):
+        print(COLOR_EMOJI_4 * WIDTH)
+    sleep(0.07)
+
+    # Frame 5: Green
+    for _ in range(ROWS):
+        print(COLOR_EMOJI_5 * WIDTH)
+    sleep(0.07)
+
+    # Frame 6: Purple
+    for _ in range(ROWS):
+        print(COLOR_EMOJI_6 * WIDTH)
+    sleep(0.07)
+    
+    # Frame 7: Clear/Blank White
     for _ in range(ROWS):
         print(EMPTY_EMOJI * WIDTH)
     sleep(0.07)
 
-    # Frame 4: Clear/Blank frame (using an empty or background emoji)
+    # Frame 8: Clear/Blank Black
     for _ in range(ROWS):
         print(EMPTY_EMOJI2 * WIDTH)
     sleep(0.07)
