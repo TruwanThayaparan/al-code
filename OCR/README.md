@@ -11,7 +11,7 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 15.py - Pangrams
 - Challenge 18.py - Years in a Range
 - Challenge 20.py - Palindromes
-- Challenge 22.py - Simple Life Calculator (unfinished)
+- Challenge 22.py - Simple Life Calculator
 - Challenge 23.py - Fibbing
 - Challenge 25.py - Ordering
 - Challenge 27.py - Word Subtraction
