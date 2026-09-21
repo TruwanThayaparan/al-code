@@ -47,19 +47,37 @@ d8b                      888 d8b          888                                   
 """
 print(bl)
 sleep(1)
+import sys
+from time import sleep
+
+# Define your grid size
 ROWS = 30
-WIDTH = 100
+WIDTH = 41
+
+# Choose your emoji characters
+COLOR_EMOJI_1 = "🟥"  # Red Square
+COLOR_EMOJI_2 = "🟦"  # Blue Square
+EMPTY_EMOJI = "⬜"    # White Square 
+EMPTY_EMOJI2 = "⬛"    # Black Square
 
 for frame in range(10):
+    # Frame 1: Write to stderr (using Color 1)
     for _ in range(ROWS):
-        sys.stderr.write("█" * WIDTH + "\n")
+        sys.stderr.write(COLOR_EMOJI_1 * WIDTH + "\n")
     sys.stderr.flush()
-    sleep(0.15)
+    sleep(0.07)
     
+    # Frame 2: Print to stdout (using Color 2)
     for _ in range(ROWS):
-        print("█" * WIDTH)
-    sleep(0.15)
+        print(COLOR_EMOJI_2 * WIDTH)
+    sleep(0.07)
     
+    # Frame 3: Clear/Blank frame (using an empty or background emoji)
     for _ in range(ROWS):
-        print(" " * WIDTH)
-    sleep(0.15)
+        print(EMPTY_EMOJI * WIDTH)
+    sleep(0.07)
+
+    # Frame 4: Clear/Blank frame (using an empty or background emoji)
+    for _ in range(ROWS):
+        print(EMPTY_EMOJI2 * WIDTH)
+    sleep(0.07)
