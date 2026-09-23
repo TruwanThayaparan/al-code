@@ -12,7 +12,9 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 13.py - Caesar Cipher
 - Challenge 15.py - Pangrams
 - Challenge 16.py - Kaprekar
+- Challenge 17.py - Number Table
 - Challenge 18.py - Years in a Range
+- Challenge 19.py - Logic Gate
 - Challenge 20.py - Palindromes
 - Challenge 22.py - Simple Life Calculator
 - Challenge 23.py - Fibbing
@@ -28,6 +30,7 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 38.py - Sing Along
 - Challenge 39.py - Even more Odd
 - Challenge 41.py - Prime Factorisation
+- Challenge 42.py - Tilers mate
 - Challenge 45.py - Find the factorial 
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
