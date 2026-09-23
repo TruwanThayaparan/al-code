@@ -8,7 +8,10 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 03.py - Thief!
 - Challenge 05.py - Fruit Machine
 - Challenge 09.py - Happy Numbers
+- Challenge 10.py - Number Names
+- Challenge 13.py - Caesar Cipher
 - Challenge 15.py - Pangrams
+- Challenge 16.py - Kaprekar
 - Challenge 18.py - Years in a Range
 - Challenge 20.py - Palindromes
 - Challenge 22.py - Simple Life Calculator
