@@ -29,7 +29,7 @@ def main():
         while True:
             try:
                 year = int(input("Enter a year: "))
-                if not (year > 0):
+                if not (9999 >= year > 0):
                     print("This is not a valid year.")
                 else:
                     break
