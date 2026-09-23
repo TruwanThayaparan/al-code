@@ -31,12 +31,12 @@ def main():
                     raise ValueError
                 break
             except ValueError:
-                print("You must enter an integer between 1 and 25")
+                print("You must enter an integer between 1 and 25.")
 
         while True:
             typ = input("Encrypt or decrypt? ").lower().strip()
             if typ not in ("encrypt", "decrypt"):
-                print("This is an invalid choice")
+                print("This is an invalid choice.")
             else:
                 break
 
