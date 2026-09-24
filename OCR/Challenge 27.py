@@ -1,5 +1,5 @@
 # Challenge 27 - Word Subtraction
-# Created; 18/09/2026
+# Created: 18/09/2026
 # Last Updated: 18/09/2026
 
 def text_to_ascii_numbers(text: str) -> int:
