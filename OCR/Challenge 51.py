@@ -2,28 +2,73 @@
 # Created: 24/09/2026
 # Last Updated: 24/09/2026
 
+import re
+
 word_book = {
-    "lol": "laugh out loud",
-    "omg": "oh my god",
-    "idc": "i don't care",
+    "afaik": "as far as i know",
+    "aka": "also known as",
+    "asap": "as soon as possible",
+    "atm": "at the moment",
+    "brb": "be right back",
+    "btw": "by the way",
+    "diy": "do it yourself",
+    "faq": "frequently asked questions",
+    "fomo": "fear of missing out",
+    "fr": "for real",
+    "g2g": "got to go",
+    "gng": "gang",
+    "gn": "good night",
+    "gtg": "got to go",
+    "hru": "how are you",
     "icl": "i can't lie",
-    "idk": "i don't know"
+    "idc": "i don't care",
+    "idgaf": "i don't give a frick",
+    "idk": "i don't know",
+    "iirc": "if i remember correctly",
+    "imho": "in my honest opinion",
+    "imo": "in my opinion",
+    "irl": "in real life",
+    "jk": "just kidding",
+    "lmao": "laughing my ahh off",
+    "lmfao": "laughing my fricking ahh off",
+    "lol": "laugh out loud",
+    "ngl": "not gonna lie",
+    "np": "no problem",
+    "nvm": "never mind",
+    "omg": "oh my god",
+    "omw": "on my way",
+    "pmo": "pees me off",
+    "pls": "please",
+    "pov": "point of view",
+    "rn": "right now",
+    "rofl": "rolling on the floor laughing",
+    "smh": "shaking my head",
+    "stfu": "shut the frick up",
+    "sybau": "stay young beautiful and unique",
+    "tbh": "to be honest",
+    "tgif": "thank god it's friday",
+    "tldr": "too long; didn't read", # improve regex to allow for tl;dr
+    "tmi": "too much information",
+    "ts": "this",
+    "ttyl": "talk to you later",
+    "wbu": "what about you",
+    "wdym": "what do you mean",
+    "wtf": "what the frick",
+    "wyd": "what you doing",
+    "yw": "you're welcome"
 }
 
-def translate_string(text):
+def translate_string(text): # regex ensures punctuation doesn't affect output
     lines = text.splitlines()
     converted_lines = []
     
     for line in lines:
-        words = line.split()
-        converted_words = []
-        for p in words:
-            clean_word = p.lower()
-            if word_book.get(clean_word):
-                converted_words.append(word_book[clean_word])
-            else:
-                converted_words.append(p)
-        converted_lines.append(" ".join(converted_words))
+        converted_line = re.sub(
+            r'\b[a-zA-Z0-9_]+\b', 
+            lambda match: word_book.get(match.group(0).lower(), match.group(0)), 
+            line
+        )
+        converted_lines.append(converted_line)
         
     return "\n".join(converted_lines)
 
@@ -90,3 +135,22 @@ def main():
             print("Invalid input. Please try again.\n")
 
 main()
+
+'''
+def translate_string(text): # old
+    lines = text.splitlines()
+    converted_lines = []
+    
+    for line in lines:
+        words = line.split()
+        converted_words = []
+        for p in words:
+            clean_word = p.lower()
+            if word_book.get(clean_word):
+                converted_words.append(word_book[clean_word])
+            else:
+                converted_words.append(p)
+        converted_lines.append(" ".join(converted_words))
+        
+    return "\n".join(converted_lines)
+'''
