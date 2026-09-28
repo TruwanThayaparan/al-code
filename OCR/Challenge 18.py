@@ -1,12 +1,12 @@
 # Challenge 18 - Years in a Range
 # Created: 09/09/2026
-# Last Updated: 09/09/2026
+# Last Updated: 28/09/2026
 
 def range_check(mi, ma):
     rep = False
     for i in range(mi, ma + 1):
-        rem = set(str(i))
-        if len(str(i)) != len(rem):
+        year_str = str(i)
+        if len(year_str) != len(set(year_str)):
             rep = True
             print(f"{i} has repeated digits.")
 
@@ -22,6 +22,7 @@ def main():
         try:
             min_bound = input("Minimum bound: ")
             if min_bound in ('q', 'quit', 'exit'):
+                print("Goodbye!")
                 break
             min_bound = int(min_bound)
             if min_bound < 0:
@@ -34,6 +35,7 @@ def main():
             try:
                 max_bound = input("Maximum bound: ")
                 if max_bound in ('q', 'quit', 'exit'):
+                    print("Goodbye!")
                     q_p = True
                     break
                 max_bound = int(max_bound)
