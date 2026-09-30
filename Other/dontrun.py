@@ -1,7 +1,8 @@
-# im not liable if you run this
+# don't run
+import os
 from random import randint
-from time import sleep
 import sys
+from time import sleep
 
 def print_warning(message):
     sys.stderr.write(f"\n{message}\n")
@@ -17,12 +18,6 @@ for frame in range(5):
     
     print_warning(f"{5 - frame} seconds left: Stop the program now!")
     sleep(1)
-
-
-
-
-
-
 
 bl = """
 Y88b   d88P                             888                        888      888                 
@@ -47,19 +42,6 @@ d8b                      888 d8b          888                                   
 """
 print(bl)
 sleep(1)
-import sys
-from time import sleep
-
-# Define your grid size
-ROWS = 30
-WIDTH = 41
-
-import sys
-from time import sleep
-
-# Define your grid dimensions
-ROWS = 30
-WIDTH = 41
 
 # Color and Style Palette
 COLOR_EMOJI_1 = "🟥"  # Red Square
@@ -72,43 +54,54 @@ EMPTY_EMOJI   = "⬜"  # White Square
 EMPTY_EMOJI2  = "⬛"  # Black Square
 
 for frame in range(10):
+    # Dynamic sizing fallback defaults to 80x24 if not running in a real terminal
+    try:
+        terminal_columns, terminal_lines = os.get_terminal_size()
+    except OSError:
+        terminal_columns, terminal_lines = 80, 24
+
+    # Emojis count as double width characters in many terminals or need adjustments.
+    # Since most emoji blocks are wide, we divide columns by 2 to prevent wrapping text.
+    width = max(1, terminal_columns // 2)
+    rows = max(1, terminal_lines - 1)  # Leave 1 line safety margin to prevent scrolling issues
+
     # Frame 1: Red (stderr)
-    for _ in range(ROWS):
-        sys.stderr.write(COLOR_EMOJI_1 * WIDTH + "\n")
+    for _ in range(rows):
+        sys.stderr.write(COLOR_EMOJI_1 * width + "\n")
     sys.stderr.flush()
     sleep(0.07)
     
     # Frame 2: Blue (stdout)
-    for _ in range(ROWS):
-        print(COLOR_EMOJI_2 * WIDTH)
+    for _ in range(rows):
+        print(COLOR_EMOJI_2 * width)
     sleep(0.07)
     
     # Frame 3: Orange
-    for _ in range(ROWS):
-        print(COLOR_EMOJI_3 * WIDTH)
+    for _ in range(rows):
+        print(COLOR_EMOJI_3 * width)
     sleep(0.07)
 
     # Frame 4: Yellow
-    for _ in range(ROWS):
-        print(COLOR_EMOJI_4 * WIDTH)
+    for _ in range(rows):
+        print(COLOR_EMOJI_4 * width)
     sleep(0.07)
 
     # Frame 5: Green
-    for _ in range(ROWS):
-        print(COLOR_EMOJI_5 * WIDTH)
+    for _ in range(rows):
+        print(COLOR_EMOJI_5 * width)
     sleep(0.07)
 
     # Frame 6: Purple
-    for _ in range(ROWS):
-        print(COLOR_EMOJI_6 * WIDTH)
+    for _ in range(rows):
+        print(COLOR_EMOJI_6 * width)
     sleep(0.07)
     
     # Frame 7: Clear/Blank White
-    for _ in range(ROWS):
-        print(EMPTY_EMOJI * WIDTH)
+    for _ in range(rows):
+        print(EMPTY_EMOJI * width)
     sleep(0.07)
 
     # Frame 8: Clear/Blank Black
-    for _ in range(ROWS):
-        print(EMPTY_EMOJI2 * WIDTH)
+    for _ in range(rows):
+        print(EMPTY_EMOJI2 * width)
     sleep(0.07)
