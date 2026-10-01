@@ -24,11 +24,19 @@ def gen_basic_pw():
 '''
 
 def gen_complex_pw():
-    chars = string.ascii_letters + string.digits + string.punctuation
-    while True:
-        password = ''.join(random.choice(chars) for _ in range(random.randint(8,16)))
-        if error_check(password) == True:
-            return password
+    length = random.randint(8, 16)
+    
+    lower = random.choice(string.ascii_lowercase)
+    upper = random.choice(string.ascii_uppercase)
+    special = random.choice(string.punctuation) 
+    
+    all_chars = string.ascii_letters + string.digits + string.punctuation
+    remaining = [random.choice(all_chars) for _ in range(length - 3)]
+    
+    password_list = [lower, upper, special] + remaining
+    random.shuffle(password_list)
+    
+    return ''.join(password_list)
 
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
@@ -39,7 +47,18 @@ def pw_gen():
         usr = input("Enter your username: ").strip() 
         if not usr:
             print("You must enter a username.")
-        else:
+            continue
+            
+        user_exists = False
+        try:
+            with open("basicinfo.txt", "r") as f:
+                if any(line.split(',')[0] == usr for line in f if ',' in line):
+                    print("Username already taken!")
+                    user_exists = True
+        except FileNotFoundError:
+            pass
+
+        if not user_exists:
             break
 
     #suggested_basic = gen_basic_pw()
