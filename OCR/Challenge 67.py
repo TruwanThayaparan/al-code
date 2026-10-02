@@ -3,8 +3,9 @@
 # Last Updated: 02/10/2026
 
 def num_to_roman(n):
-    if not(0 < n < 4000):
-        return False, "Constraint: number must be between 1 and 3999."
+    #if not(0 < n < 4000):
+    #    return "Constraint: number must be between 1 and 3999."
+        
     roman_mapping = [
         (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
         (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
@@ -18,7 +19,7 @@ def num_to_roman(n):
             roman_string += numeral
             n -= value
             
-    return True, roman_string
+    return roman_string
 
 def main():
     while True:
@@ -28,11 +29,10 @@ def main():
                 break
             else:
                 nom = int(nom)
-                err, num = num_to_roman(nom)
-                if not err:
-                    print(num)
+                if not(0 < nom < 4000):
+                    print("Constraint: number must be between 1 and 3999.")
                 else:
-                    print(f"{nom} in Roman Numerals is {num}.")
+                    print(f"{nom} in Roman Numerals is {num_to_roman(nom)}.")
         except ValueError:
             print("You must enter a number between 1 and 3999.")
 
