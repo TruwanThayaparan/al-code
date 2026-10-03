@@ -1,5 +1,5 @@
 # OCR
-The challenges I solved in this folder come from https://www.ocr.org.uk/Images/260930-coding-challenges-booklet.pdf
+The challenges I solved in this folder come from https://www.ocr.org.uk/Images/260930-coding-challenges-booklet.pdf.
 
 Tkinter versions may be made later on, but it is my NEA that would actually need it. I just do this aside.
 
@@ -7,6 +7,7 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 01.py - Factorial Finder
 - Challenge 03.py - Thief!
 - Challenge 05.py - Fruit Machine
+- Challenge 06.py - Unit Converter (temp, currency, volume)
 - Challenge 09.py - Happy Numbers
 - Challenge 10.py - Number Names
 - Challenge 13.py - Caesar Cipher
@@ -18,24 +19,33 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 20.py - Palindromes
 - Challenge 22.py - Simple Life Calculator
 - Challenge 23.py - Fibbing
+- Challenge 24.py - Hack-proof
 - Challenge 25.py - Ordering
 - Challenge 27.py - Word Subtraction
 - Challenge 28.py - Name that Number
 - Challenge 29.py - Item Merge
 - Challenge 30.py - Year Addition
 - Challenge 31.py - Forwards and Backwards
+- Challenge 32.py - Code it up
+- Challenge 34.py - What's the day?
 - Challenge 35.py - Game of Chance
 - Challenge 36.py - Triangulate
 - Challenge 37.py - Fizz Buzz
 - Challenge 38.py - Sing Along
 - Challenge 39.py - Even more Odd
+- Challenge 40.py - Base of Numbers
 - Challenge 41.py - Prime Factorisation
 - Challenge 42.py - Tilers mate
 - Challenge 45.py - Find the factorial 
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
+- Challenge 51.py - Text-speak converter
+- Challenge 53.py - Mortgage Calculator
 - Challenge 61.py - Your name is...
+- Challenge 62.py - R@nd0m P@ssw0rd generator
+- Challenge 67.py - What have the Romans ever done for us?
 - Challenge 70.py - Of mice and men
+- Challenge 71.py - Goldbach
 - Challenge 76.py - That's a lot of number
 - Challenge 77.py - Fib on a chi
 - Challenge 78.py - 2 fiddy
