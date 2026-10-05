@@ -26,6 +26,8 @@ def gen_questions(c, oper):
             rans = random.randint(1, 12)
             numb = random.randint(1, 12)
             numa = rans * numb 
+        else:
+            raise ValueError("Invalid unit passed.")
 
         questions.append(unit)
         numasn.append(numa)
@@ -36,7 +38,13 @@ def gen_questions(c, oper):
 def main():
     print("--- Arithmetic Test ---")
     quecount = 10
-    que, nx, ny = gen_questions(quecount, ["+", "-", "*", "/"])
+    opers = ["+", "-", "*", "/"]
+    for op in opers:
+        if op not in ["+", "-", "*", "/"]:
+            print(f"Error: '{op}' is not a valid math operator. Please remove it.")
+            return
+
+    que, nx, ny = gen_questions(quecount, opers)
 
     while True:
         name = input("Enter your name: ").strip().capitalize()
