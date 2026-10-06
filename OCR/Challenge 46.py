@@ -14,12 +14,12 @@ def cnegation(n1: complex, n2: complex) -> tuple:
 def cinversion(n1: complex, n2: complex) -> tuple:
     try:
         inv_n1 = n1 ** -1
-    except ZeroDivisionError:
+    except (ZeroDivisionError, OverflowError):
         inv_n1 = complex(float('inf'), float('inf'))
         
     try:
         inv_n2 = n2 ** -1
-    except ZeroDivisionError:
+    except (ZeroDivisionError, OverflowError):
         inv_n2 = complex(float('inf'), float('inf'))
         
     return inv_n1, inv_n2
