@@ -79,8 +79,9 @@ The ones without full titles are ones I have not completed:
 - Challenge 72.py - Lists
 - C73
 - C74
-- C75
+- Challenge 75.py - String permutation
 - Challenge 76.py - That's a lot of number
 - Challenge 77.py - Fib on a chi
 - Challenge 78.py - 2 fiddy
+- C79
 - Challenge 80.py - Happy Hopper
