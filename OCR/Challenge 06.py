@@ -1,6 +1,6 @@
 # Challenge 6 - Unit Converter (temp, currency, volume)
 # Created: 24/09/2026
-# Last Updated: 24/09/2026
+# Last Updated: 07/10/2026
 
 def prompt_con(ut):
     while True:
@@ -87,17 +87,16 @@ def main():
     print("4. Exit")
     while True:
         b = input("Please choose an option (1, 2, 3, or 4): ").strip().lower()
-        if b not in ("1", "2", "3", "4", "temp", "temperature", "currency", "volume", "exit"):
-            print("This is an invalid option."); continue
-
         if b in ("1", "temp", "temperature"):
             convert("temperature")
         elif b in ("2", "currency"):
             convert("currency")
         elif b in ("3", "volume"):
             convert("volume")
-        else:
+        elif b in ("4", "quit", "q", "exit"):
             print("Goodbye!")
             break
+        else:
+            print("Invalid option!")
 
 main()
