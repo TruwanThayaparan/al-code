@@ -3,30 +3,41 @@ The challenges I solved in this folder come from https://www.ocr.org.uk/Images/2
 
 Tkinter versions may be made later on, but it is my NEA that would actually need it. I just do this aside.
 
-# Solved
+# Challenges
+The ones without full titles are ones I have not completed:
 - Challenge 01.py - Factorial Finder
+- C02
 - Challenge 03.py - Thief!
+- C04
 - Challenge 05.py - Fruit Machine
 - Challenge 06.py - Unit Converter (temp, currency, volume)
+- Challenge 07.py - Credit Card Validator
+- Challenge 08.py - Arithmetic test
 - Challenge 09.py - Happy Numbers
 - Challenge 10.py - Number Names
+- Challenge 11.py - Regex Query Tool
+- C12
 - Challenge 13.py - Caesar Cipher
+- C14
 - Challenge 15.py - Pangrams
 - Challenge 16.py - Kaprekar
 - Challenge 17.py - Number Table
 - Challenge 18.py - Years in a Range
 - Challenge 19.py - Logic Gate
 - Challenge 20.py - Palindromes
+- C21
 - Challenge 22.py - Simple Life Calculator
 - Challenge 23.py - Fibbing
 - Challenge 24.py - Hack-proof
 - Challenge 25.py - Ordering
+- Challenge 26.py - Truth or not
 - Challenge 27.py - Word Subtraction
 - Challenge 28.py - Name that Number
 - Challenge 29.py - Item Merge
 - Challenge 30.py - Year Addition
 - Challenge 31.py - Forwards and Backwards
 - Challenge 32.py - Code it up
+- Challenge 33.py - Mor-se Coding
 - Challenge 34.py - What's the day?
 - Challenge 35.py - Game of Chance
 - Challenge 36.py - Triangulate
@@ -36,16 +47,39 @@ Tkinter versions may be made later on, but it is my NEA that would actually need
 - Challenge 40.py - Base of Numbers
 - Challenge 41.py - Prime Factorisation
 - Challenge 42.py - Tilers mate
-- Challenge 45.py - Find the factorial 
+- C43
+- C44
+- Challenge 45.py - Find the factorial
+- Challenge 46.py - Complex Numbers
 - Challenge 47.py - Happy Numbers =)
 - Challenge 48.py - Reverse it
+- C49
+- C50
 - Challenge 51.py - Text-speak converter
+- Challenge 52.py - Is this card valid?
 - Challenge 53.py - Mortgage Calculator
+- C54
+- C55
+- C56
+- C57
+- C58
+- C59
+- C60
 - Challenge 61.py - Your name is...
 - Challenge 62.py - R@nd0m P@ssw0rd generator
+- C63
+- C64
+- Challenge 65.py - Spam filter
+- C66
 - Challenge 67.py - What have the Romans ever done for us?
+- C68
+- C69
 - Challenge 70.py - Of mice and men
 - Challenge 71.py - Goldbach
+- Challenge 72.py - Lists
+- C73
+- C74
+- C75
 - Challenge 76.py - That's a lot of number
 - Challenge 77.py - Fib on a chi
 - Challenge 78.py - 2 fiddy
