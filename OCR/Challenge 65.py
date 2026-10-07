@@ -12,7 +12,11 @@ for dish in menu_dishes:
     beginning_spam = f"Spam and {dish}"
     end_spam = f"{dish} and Spam"
     
-    if len(dish) > 1:
+    if " " in dish:
+        words = dish.split()
+        mid_index = random.randint(1, len(words) - 1)
+        middle_spam = " ".join(words[:mid_index]) + " and Spam and " + " ".join(words[mid_index:])
+    elif len(dish) > 1:
         mid_index = random.randint(1, len(dish) - 1)
         middle_spam = dish[:mid_index] + "Spam" + dish[mid_index:]
     else:
