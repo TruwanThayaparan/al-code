@@ -77,7 +77,7 @@ The ones without full titles are ones I have not completed:
 - Challenge 70.py - Of mice and men
 - Challenge 71.py - Goldbach
 - Challenge 72.py - Lists
-- C73
+- Challenge 73.py - Travel club _(weak version)_
 - C74
 - Challenge 75.py - String permutation
 - Challenge 76.py - That's a lot of number
