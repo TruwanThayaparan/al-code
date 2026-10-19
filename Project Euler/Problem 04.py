@@ -1,3 +1,4 @@
+# P4 - Largest Palindrome Product
 max_product = 0
 largest_pair = (0, 0)
 
@@ -11,3 +12,4 @@ for i in range(100, 1000):
                 largest_pair = (i, j)
 
 print(f"Largest pair: {largest_pair} with a product of {max_product}")
+# output: pair = 913, 993; product = 906609
