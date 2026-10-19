@@ -1,3 +1,5 @@
+# P7 - 10 001st Prime
+
 def prime_check(i):
     if i <= 1: return False
     if i == 2: return True
@@ -15,4 +17,4 @@ while primes_found < 10001:
     if prime_check(x):
         primes_found += 1
 
-print(f"The 10,001st prime number is: {x}")
+print(f"The 10,001st prime number is: {x}") # outputs '104743'
