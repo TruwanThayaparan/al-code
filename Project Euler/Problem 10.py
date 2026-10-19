@@ -1,3 +1,4 @@
+# P10 - Summation of Primes
 def prime_check(i):
     if i <= 1: return False
     if i == 2: return True
@@ -15,4 +16,4 @@ while x > 0:
     if prime_check(x):
         total += x
 
-print(f"Total of prime numbers under 2 million is: {total}")
+print(f"Total of prime numbers under 2 million is: {total}") # outputs '142913828922'
