@@ -1,3 +1,4 @@
+# P20 - Factorial Digit Sum
 import math
 p = 0
 for i in str(math.factorial(100)):
