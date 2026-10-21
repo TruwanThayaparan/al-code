@@ -41,7 +41,7 @@
           const subTree = await fetchTree(item.path);
           li.appendChild(subTree);
         } else if (item.type === "file") {
-          const rawURL = `${window.location.origin}/${item.path}`;
+          const rawURL = `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${item.path}`;
           li.innerHTML = `<a href="${rawURL}" target="_blank">📄 ${item.name}</a>`;
         }
         ul.appendChild(li);
