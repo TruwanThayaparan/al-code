@@ -25,7 +25,7 @@ The ones without full titles are ones I have not completed:
 - Challenge 18.py - Years in a Range
 - Challenge 19.py - Logic Gate
 - Challenge 20.py - Palindromes
-- C21
+- Challenge 21.py - Data Entry
 - Challenge 22.py - Simple Life Calculator
 - Challenge 23.py - Fibbing
 - Challenge 24.py - Hack-proof
