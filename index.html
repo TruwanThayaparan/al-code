@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <style>
+    body { font-family: sans-serif; }
+    ul { list-style-type: none; padding-left: 20px; }
+    a { text-decoration: none; color: #0366d6; }
+  </style>
+</head>
+<body>
+  <h1>📁 Projects</h1>
+  <h3>Source <a href="https://github.com/tr-th/al-code">here</a>. </h3>
+
+  <h4>If nothing loads, use the link above or try again later. </h4>
+  <div id="file-tree">Loading...</div>
+
+  <script>
+    const user = "tr-th";
+    const repo = "al-code";
+    const branch = "main";
+    const apiBase = `https://api.github.com/repos/${user}/${repo}/contents/`;
+
+    async function fetchTree(path = "") {
+      const url = apiBase + path;
+      const response = await fetch(url);
+      if (!response.ok) {
+        return `<li>Error loading ${path}</li>`;
+      }
+      const items = await response.json();
+
+      if (!Array.isArray(items)) return "";
+
+      const ul = document.createElement("ul");
+      for (const item of items) {
+        const li = document.createElement("li");
+
+        if (item.type === "dir") {
+          li.innerHTML = `<strong>📁 ${item.name}</strong>`;
+          const subTree = await fetchTree(item.path);
+          li.appendChild(subTree);
+        } else if (item.type === "file") {
+          const rawURL = `${window.location.origin}/${item.path}`;
+          li.innerHTML = `<a href="${rawURL}" target="_blank">📄 ${item.name}</a>`;
+        }
+        ul.appendChild(li);
+      }
+      return ul;
+    }
+
+    fetchTree().then(tree => {
+      const container = document.getElementById("file-tree");
+      container.innerHTML = "";
+      container.appendChild(tree);
+    });
+  </script>
+</body>
+</html>
